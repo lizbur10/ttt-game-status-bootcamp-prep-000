@@ -21,7 +21,13 @@ def won? (board)
     index_array.each do |index|
       combo << board[index]
     end
-    if combo.all("X") || combo.all("O")
+    if combo.all? do |move|
+      move == "X"
+      end
+      return index_array
+    elsif combo.all? do |move|
+        move == "O"
+      end
       return index_array
     end
   end
@@ -48,6 +54,6 @@ end
 
 def winner(board)
   if won?(board)
-    return board[won?(board)[0]]
+    return board[won?(board)[0]] 
   end
 end
