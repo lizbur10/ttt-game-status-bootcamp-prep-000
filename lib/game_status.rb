@@ -36,6 +36,6 @@ end
 
 def full?(board)
   board.all? do |element|
-    element == " " || element == "O"
+    element == "X" || element == "O"
   end
 end
