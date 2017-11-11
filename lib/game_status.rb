@@ -21,13 +21,7 @@ def won? (board)
     index_array.each do |index|
       combo << board[index]
     end
-    winning_combo_x = combo.all? do |move|
-      move == "X"
-    end
-    winning_combo_o = combo.all? do |move|
-      move == "O"
-    end
-    if winning_combo_x || winning_combo_o
+    if combo.all("X") || combo.all("O")
       return index_array
     end
   end
