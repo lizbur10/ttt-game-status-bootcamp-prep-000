@@ -53,5 +53,8 @@ def over?(board)
 end
 
 def winner(board)
-
+  if won?(board)
+    index = index_array[0]
+    return board[index] 
+  end
 end
