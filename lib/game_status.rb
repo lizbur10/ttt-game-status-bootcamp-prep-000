@@ -22,7 +22,7 @@ def won? (board)
       combo << board[index]
     end
     if combo.all? do |move|
-      move == "X"
+        move == "X"
       end
       return index_array
     elsif combo.all? do |move|
